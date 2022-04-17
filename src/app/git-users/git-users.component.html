@@ -3,15 +3,19 @@
     <div class="row">
       <div class="col-md-6 mx-auto">
         <form #form="ngForm" class="d-flex my-3" (submit)="collectUserName()">
-          <input class="form-control me-2" name="search" type="search" #search="ngModel" [(ngModel)]="username" placeholder="Search by UserName E.g. charles-okunzo" aria-label="Search">
-          <button class="btn btn-outline-warning" type="submit"><i class="fas fa-search"></i></button>
+          <input class="form-control me-2" name="search" type="search" #search="ngModel" [(ngModel)]="username" required placeholder="Search by UserName E.g. charles-okunzo" aria-label="Search">
+          <button [disabled]="form.invalid" class="btn btn-outline-warning" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </div>
   </div>
 
+  <div [hidden]="showResults">
+    <marquee><span class="text-warning">Enter UserName in the Search bar to Search for users on GitHub. Results will be displayed here...</span></marquee>
+  </div>
 
-<div class="container">
+
+<div class="container" [hidden]="!showResults">
   <div class="row">
     <div class="col-md-6 d-flex justify-content-center align-items-center">
       <!-- <div> -->
@@ -53,9 +57,8 @@
 
       <div class="mt-4 pb-5">
         <h3 class="text-warning">Public Repos</h3><hr>
-        <p>{{userDetails.public_repos}} reposistories</p>
-        <h4><a href="#" target="_blank" class="nav-link text-white">View <span class="text-warning">Repos</span><i class="fas fa-link"></i></a></h4>
-      </div>
+        <p>{{userDetails.public_repos}} repositories</p>
+        </div>
     </div>
   </div>
 </div>
