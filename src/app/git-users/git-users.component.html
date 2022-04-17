@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <form class="d-flex my-3">
-          <input class="form-control me-2" type="search" placeholder="Enter UserName E.g. charles-okunzo" aria-label="Search">
+        <form #form="ngForm" class="d-flex my-3" (submit)="collectUserName()">
+          <input class="form-control me-2" name="search" type="search" #search="ngModel" [(ngModel)]="username" placeholder="Search by UserName E.g. charles-okunzo" aria-label="Search">
           <button class="btn btn-outline-warning" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
@@ -13,7 +13,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6 d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
       <!-- <div> -->
         <h1 class="text-white text-center users">User<span class="text-warning">Profile</span></h1>
       <!-- </div> -->
@@ -53,8 +53,8 @@
 
       <div class="mt-4 pb-5">
         <h3 class="text-warning">Public Repos</h3><hr>
-        <p>{{userDetails.public_repos}} repos</p>
-        <h5><a href="#" target="_blank" class="nav-link text-white">View <span class="text-warning">Repos</span><i class="fas fa-link"></i></a></h5>
+        <p>{{userDetails.public_repos}} reposistories</p>
+        <h4><a href="#" target="_blank" class="nav-link text-white">View <span class="text-warning">Repos</span><i class="fas fa-link"></i></a></h4>
       </div>
     </div>
   </div>

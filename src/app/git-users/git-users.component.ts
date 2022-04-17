@@ -8,16 +8,22 @@ import { GitHubAPIService } from '../service/git-hub-api.service';
 })
 export class GitUsersComponent implements OnInit {
 
+  username:any
+
   userDetails:any= [];
 
   constructor(private githubApi:GitHubAPIService) { }
 
-  ngOnInit(): void {
+  collectUserName(){
+      this.githubApi.getGitHubUserDetails(this.username).then((resp)=>{
+        this.userDetails= resp
+      }, err=> alert('User Not Found'))
 
-   this.githubApi.getGitHubUserDetails('AjedidahMwanzia').then((resp=>{
-     this.userDetails= resp
-     console.log(resp)
-   }))
+      console.log(this.username)
+    return false;
+  }
+
+  ngOnInit(): void {
    
   }
 
