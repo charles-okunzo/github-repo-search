@@ -1,5 +1,5 @@
 .boundary{
-  border-left: 2px solid #80A9AC;
+  border-left: 2px solid #fff;
   /* border-radius: 2%; */
   backdrop-filter: blur(10px);
   /* box-shadow: 5px 5px 5px 5px #80A9AC; */
@@ -15,7 +15,7 @@ h1.users{
 h1.users::after{
   content: '';
   width: 40vw;
-  height: 0.5vh;
+  height: 2px;
   background-color: #FFC22F;
   position: absolute;
   bottom: 0;
