@@ -11,15 +11,15 @@
 
 
 
-<div classm="container">
-  <div class="">
-    <div class="col-md-4">
+<div classm="container-fluid">
+  <div class="row">
+    <div class="col-md-4 my-3" *ngFor="let repoDetail of repoDetails">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5><hr>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title text-warning">{{repoDetail.name}}</h5><hr>
+          <p class="card-text">{{repoDetail.description}}</p>
           <hr>
-          <p class="card-text"><small class="">Last updated 3 mins ago</small> <span title="View repository" class="right"><a class="nav-link text-white" href="">View Repo <i class="fas fa-link"></i></a></span></p>
+          <p class="card-text"><small class="">Last updated {{repoDetail.updated_at | date}}</small> <span title="View repository" class="right"><a class="nav-link text-white" target="_blank" href="{{repoDetail.html_url}}">View Repo <i class="fas fa-link"></i></a></span></p>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GitHubAPIService } from '../service/git-hub-api.service';
 
 @Component({
   selector: 'app-git-repos',
@@ -7,16 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitReposComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ApiService:GitHubAPIService) { }
 
+  repoDetails:any=[];
   username:any;
 
 
   getUserName(){
-
+    this.ApiService.getUserGitHubRepos(this.username).then((resp)=>{
+      this.repoDetails=resp;
+      console.log(resp)
+    }, err=> alert('Err::User Not Found'))
   }
 
   ngOnInit(): void {
+    
   }
 
 }
