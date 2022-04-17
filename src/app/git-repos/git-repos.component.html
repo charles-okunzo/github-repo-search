@@ -1,1 +1,27 @@
-<p>git-repos works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <form #form="ngForm" class="d-flex my-3" (submit)="getUserName()">
+        <input class="form-control me-1" name="search" type="search" #search="ngModel" [(ngModel)]="username" required placeholder="Search by UserName E.g. charles-okunzo" aria-label="Search">
+        <button [disabled]="form.invalid" class="btn btn-outline-warning" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div classm="container">
+  <div class="">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5><hr>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <hr>
+          <p class="card-text"><small class="">Last updated 3 mins ago</small> <span title="View repository" class="right"><a class="nav-link text-white" href="">View Repo <i class="fas fa-link"></i></a></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

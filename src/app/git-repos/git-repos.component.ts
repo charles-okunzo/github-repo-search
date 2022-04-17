@@ -9,6 +9,13 @@ export class GitReposComponent implements OnInit {
 
   constructor() { }
 
+  username:any;
+
+
+  getUserName(){
+
+  }
+
   ngOnInit(): void {
   }
 
