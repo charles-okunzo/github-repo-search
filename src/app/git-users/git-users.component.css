@@ -3,6 +3,14 @@
   /* border-radius: 2%; */
   backdrop-filter: blur(10px);
   /* box-shadow: 5px 5px 5px 5px #80A9AC; */
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  min-height: auto;
+}
+
+.boundary::-webkit-scrollbar{
+  display: none;
 }
 
 hr{
