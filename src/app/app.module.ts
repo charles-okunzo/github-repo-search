@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { GitReposComponent } from './git-repos/git-repos.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxUiLoaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

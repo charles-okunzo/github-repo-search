@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { GitHubAPIService } from '../service/git-hub-api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { GitHubAPIService } from '../service/git-hub-api.service';
 })
 export class GitReposComponent implements OnInit {
 
-  constructor(private ApiService:GitHubAPIService) { }
+  constructor(private ApiService:GitHubAPIService, private ngxLoader:NgxUiLoaderService) { }
 
   repoDetails:any=[];
   username:any;
@@ -17,10 +18,12 @@ export class GitReposComponent implements OnInit {
   submited=false;
 
   getUserName(){
-    this.submited=true
+    this.submited=true;
+    this.ngxLoader.start();
     this.ApiService.getUserGitHubRepos(this.username).then((resp)=>{
       this.repoDetails=resp;
       this.resultsFound = this.repoDetails.length
+      this.ngxLoader.stop();
     }, err=> alert('Err::User Not Found'))
   }
 
