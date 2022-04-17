@@ -18,4 +18,15 @@ export class GitHubAPIService {
 
     return promise;
   }
+
+
+  getUserGitHubRepos(username:any){
+
+
+    let promise= new Promise((resolve, reject)=>{
+      resolve(this.http.get(`${environment.GitHubAPIUrl}/users/${username}/repos`).toPromise());
+    })
+
+    return promise;
+  }
 }
