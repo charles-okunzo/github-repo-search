@@ -11,33 +11,50 @@
   </div>
 
 
-<div class="container">
+<div class="container mb-5">
   <div class="row">
     <div class="col-md-6 d-flex justify-content-center align-items-center min-vh-100">
       <!-- <div> -->
-        <h1 class="text-white text-center users">User's<span class="text-warning">Profile</span></h1>
+        <h1 class="text-white text-center users">User<span class="text-warning">Profile</span></h1>
       <!-- </div> -->
     </div>
 
     <div class="col-md-6 boundary">
       <div class="text-center mt-5">
-        <img src="https://avatars.githubusercontent.com/u/56395304?v=4" class="img-fluid avatar" alt="profile pic avatar">
+        <img src="{{userDetails.avatar_url}}" class="img-fluid avatar" alt="profile pic avatar">
+      </div>
+      <div class="mt-4">
+        <h3 class="pt-2 text-warning">Name:</h3>
+        <hr>
+        <h4 class="pt-2">{{userDetails.name}}</h4>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="pt-2 text-warning">UserName:</h3>
+        <hr>
+        <h4 class="pt-2">{{userDetails.login}}</h4>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="text-warning">Bio:</h3>
+        <hr>
+        <p><i>{{userDetails.bio}}</i></p>
       </div>
       <div>
-        <h2 class="pt-2 text-warning">Name:</h2>
+        <h3><a href="{{userDetails.html_url}}" target="_blank" class="nav-link text-white">Visit <span class="text-warning">GitHub</span><i class="fas fa-link"></i></a></h3>
         <hr>
-        <h4 class="pt-2">Charles Okunzo</h4>
-      </div>
-      <div>
-        <h2 class="text-warning">Bio:</h2>
-        <hr>
-        <p><i>Bio info goes here</i></p>
       </div>
       <div class="mt-4 following">
-        <h2 class="text-warning">Followers:</h2>
+        <h3 class="text-warning">Followers:</h3>
         <hr>
-        <p><i class="fas fa-users"></i> 10 following</p>
-        <p><i class="fas fa-users"></i> 20 followers</p>
+        <span><i class="fas fa-users mx-3"></i> {{userDetails.following}} following</span>
+        <span><i class="fas fa-users mx-3"></i> {{userDetails.followers}} followers</span>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="text-warning">Public Repos</h3><hr>
+        <p>{{userDetails.public_repos}} repos</p>
+        <h5><a href="#" target="_blank" class="nav-link text-white">View <span class="text-warning">Repos</span><i class="fas fa-link"></i></a></h5>
       </div>
     </div>
   </div>
