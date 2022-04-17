@@ -12,12 +12,15 @@ export class GitReposComponent implements OnInit {
 
   repoDetails:any=[];
   username:any;
+  resultsFound!:number;
 
+  submited=false;
 
   getUserName(){
+    this.submited=true
     this.ApiService.getUserGitHubRepos(this.username).then((resp)=>{
       this.repoDetails=resp;
-      console.log(resp)
+      this.resultsFound = this.repoDetails.length
     }, err=> alert('Err::User Not Found'))
   }
 

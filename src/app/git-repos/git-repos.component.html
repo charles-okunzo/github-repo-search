@@ -9,6 +9,14 @@
   </div>
 </div>
 
+<div class="col-md-8 mx-auto banner" [hidden]="submited">
+  <p class="py-5 text-center display-6">Search GitHub Repositories</p>
+</div>
+
+<div class="text-center" [hidden]="!submited">
+  <h6><span class="text-warning">{{resultsFound}}</span> repositories found</h6>
+</div>
+
 
 
 <div classm="container-fluid">

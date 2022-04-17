@@ -22,7 +22,7 @@ input:focus, input{
 }
 .card{
   backdrop-filter: blur(3px);
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255,255,255,0.1);
   transition: all 1s ease-in-out;
   position: relative;
 }
@@ -55,6 +55,10 @@ input:focus, input{
 
 .right{
   float: right;
+}
+
+.banner{
+  background-color: rgba(255, 194, 47,0.2);
 }
 
 /* .rowz{
