@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitUsersComponent } from './git-users/git-users.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GitReposComponent } from './git-repos/git-repos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitUsersComponent,
-    NavbarComponent
+    NavbarComponent,
+    GitReposComponent
   ],
   imports: [
     BrowserModule,
