@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6 mx-auto">
         <form #form="ngForm" class="d-flex my-3" (submit)="collectUserName()">
-          <input class="form-control me-2" name="search" type="search" #search="ngModel" [(ngModel)]="username" required placeholder="Search by UserName E.g. charles-okunzo" aria-label="Search">
+          <input class="form-control me-1" name="search" type="search" #search="ngModel" [(ngModel)]="username" required placeholder="Search by UserName E.g. charles-okunzo" aria-label="Search">
           <button [disabled]="form.invalid" class="btn btn-outline-warning" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>

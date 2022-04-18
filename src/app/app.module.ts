@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { GitUsersComponent } from './git-users/git-users.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GitReposComponent } from './git-repos/git-repos.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitUsersComponent,
     NavbarComponent,
-    GitReposComponent
+    GitReposComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
