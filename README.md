@@ -16,6 +16,8 @@
 
 This is an application that employs github API in which a person can search for github repositories by name as well as other users on github.
 
+![Landing Page](src/assets/Screenshot-from-2022-04-18-7-47-26.png)
+
 
 ## Installation 
 ### Requirements
