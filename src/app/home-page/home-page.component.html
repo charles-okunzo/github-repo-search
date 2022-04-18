@@ -1,1 +1,48 @@
-<p>home-page works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+      <!-- <div> -->
+        <h1 class="text-white text-center users">My<span class="text-warning">Profile</span></h1>
+      <!-- </div> -->
+    </div>
+
+    <div class="col-md-6 boundary">
+      <div class="text-center mt-5">
+        <img src="{{userDetails.avatar_url}}" class="img-fluid avatar" alt="profile pic avatar">
+      </div>
+      <div class="mt-4">
+        <h3 class="pt-2 text-warning">Name:</h3>
+        <hr>
+        <h4 class="pt-2">{{userDetails.name}}</h4>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="pt-2 text-warning">UserName:</h3>
+        <hr>
+        <h4 class="pt-2">{{userDetails.login}}</h4>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="text-warning">Bio:</h3>
+        <hr>
+        <p><i>{{userDetails.bio}}</i></p>
+      </div>
+      <div>
+        <h3><a href="{{userDetails.html_url}}" target="_blank" class="nav-link text-white">Visit <span class="text-warning">GitHub</span><i class="fas fa-link"></i></a></h3>
+        <hr>
+      </div>
+      <div class="mt-4 following">
+        <h3 class="text-warning">Followers:</h3>
+        <hr>
+        <span><i class="fas fa-users mx-3"></i> {{userDetails.following}} following</span>
+        <span><i class="fas fa-users mx-3"></i> {{userDetails.followers}} followers</span>
+      </div>
+
+      <div class="mt-4 pb-5">
+        <h3 class="text-warning">Public Repos</h3><hr>
+        <p>{{userDetails.public_repos}} repositories</p>
+        <h3><a href="https://github.com/charles-okunzo?tab=repositories" target="_blank" class="nav-link text-white">View <span class="text-warning">repositories</span><i class="fas fa-link"></i></a></h3>
+        </div>
+    </div>
+  </div>
+</div>
