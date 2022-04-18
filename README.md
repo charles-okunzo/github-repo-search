@@ -1,6 +1,6 @@
 # GitHub Search
 #### By Charles Okunzo, April 18, 2022
-### This is a website in which a user can search for github repositories as well as users.
+### This is a website in which a user can search for github repositories as well as other github users.
 
 ## Table of Contents
 + [Description](#description)
@@ -50,7 +50,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-[Go Back to the top](#quotes)
+[Go Back to the top](#github-search)
 
 ## Live link
 [Follow This Link](http://charles-okunzo.github.io/github-repo-search/)
@@ -62,7 +62,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Angular framework- to create the app
 * Bootstrap
 
-[Go Back to the top](#quotes)
+[Go Back to the top](#github-search)
 
 
 ## Known Bugs
@@ -72,7 +72,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Copyright (c) 2022 MIT License. [View License Here](LICENSE)
 
-[Go Back to the top](#quotes)
+[Go Back to the top](#github-search)
 
 ## Authors Info
 
