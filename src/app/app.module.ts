@@ -10,6 +10,8 @@ import { GitUsersComponent } from './git-users/git-users.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GitReposComponent } from './git-repos/git-repos.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { DatePipe } from './date.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     GitUsersComponent,
     NavbarComponent,
     GitReposComponent,
-    HomePageComponent
+    HomePageComponent,
+    DatePipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
