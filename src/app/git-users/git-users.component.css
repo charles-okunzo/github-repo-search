@@ -39,6 +39,12 @@ h1.users::after{
   color: #FFC22F;
 }
 
+input{
+  border-style: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+}
+
 
 input:focus, input{
   background-color: transparent;

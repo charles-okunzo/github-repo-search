@@ -23,8 +23,8 @@ export class GitReposComponent implements OnInit {
     this.ApiService.getUserGitHubRepos(this.username).then((resp)=>{
       this.repoDetails=resp;
       this.resultsFound = this.repoDetails.length
-      this.ngxLoader.stop();
     }, err=> alert('Err::User Not Found'))
+    this.ngxLoader.stop();
   }
 
   ngOnInit(): void {

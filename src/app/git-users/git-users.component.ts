@@ -22,8 +22,8 @@ export class GitUsersComponent implements OnInit {
     this.ngxLoader.start();
       this.githubApi.getGitHubUserDetails(this.username).then((resp)=>{
         this.userDetails= resp
-        this.ngxLoader.stop()
       }, err=> alert('User Not Found'))
+      this.ngxLoader.stop()
   }
 
   ngOnInit(): void {
